@@ -1,0 +1,15 @@
+.blog__content-wrapper {
+  top: 20px;
+}
+
+.list-group-item {
+  border: none !important;
+  transition: 0.2s all linear;
+  position: relative;
+  margin-top: 10px !important;
+}
+
+.list-group-item:hover {
+  box-shadow: 35px 24px 34px -3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}

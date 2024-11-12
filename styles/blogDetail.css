@@ -1,0 +1,34 @@
+#line {
+  border: 2px solid #ddd;
+  width: 100px;
+  margin: 20px 0 40px 0;
+}
+
+.min-container {
+  max-width: 650px;
+  margin: auto;
+}
+
+blockquote {
+  margin: 18px 0 16px 0;
+  padding-left: 15px;
+  padding: 15px;
+  position: relative;
+  word-wrap: break-word;
+  border-left: 0.3em solid #d1d4d7;
+  background: rgba(0, 0, 0, 0.02);
+  color: #6a737d;
+}
+
+.cList {
+  list-style-type: disc;
+}
+
+#detail__footer {
+    padding-top: 130px;
+}
+
+.justify {
+  text-align: justify;
+  font-size: 18px;
+}
