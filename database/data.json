@@ -61,7 +61,7 @@
     {
       "id": "97312dec-3074-4394-9378-e65a2b15e05b",
       "created_at": "01 August, 2022",
-      "base": "",
+      "base": "c64f0ceb-83e6-4e2d-94df-504c3f29d4c1",
       "current_titles": [
         {
           "value": "Amazon'dan Offer Oldim",
@@ -70,11 +70,6 @@
       ],
       "subtitles": [
         {
-          "id": "c64f0ceb-83e6-4e2d-94df-504c3f29d4c1",
-          "value": "Bosqich #1: Online Assesment",
-          "style": ""
-        },
-        {
           "id": "287702df-31bf-458d-956b-66b9d2b6555d",
           "value": "Bosqich #2: Texnik Suhbat",
           "style": ""
@@ -82,6 +77,11 @@
         {
           "id": "cce17609-c04e-4e49-bcc8-4c7ec323fcd5",
           "value": "Texnik Suhbat Natijasi",
+          "style": ""
+        },
+        {
+          "id": "c64f0ceb-83e6-4e2d-94df-504c3f29d4c1",
+          "value": "Bosqich #1: Online Assesment",
           "style": ""
         },
         {
