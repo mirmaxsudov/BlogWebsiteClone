@@ -41,7 +41,7 @@ blockquote {
     rgba(39, 69, 149, 1) 27%,
     rgba(2, 3, 255, 1) 93%
   );
-  transition: 1.2s all linear;
+  transition: 0.1s all linear;
   height: 5px;
 }
 

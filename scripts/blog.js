@@ -1,3 +1,5 @@
+
+
 const listWrapper = document.querySelector("#list-wrapper");
 
 window.onload = () => {
@@ -11,19 +13,17 @@ function load() {
 }
 
 function render(blogs) {
-  console.log(blogs);
-  
   blogs.sort((a, b) => {
-    return new Date(b.created_at) - new Date(a.created_at)
-  })
-  
-  console.log(blogs);
+    return new Date(b.created_at) - new Date(a.created_at);
+  });
 
   listWrapper.innerHTML = "";
 
   blogs.forEach((blog) => {
     listWrapper.innerHTML += `
-         <li class="list-group-item" onclick="toBlogDetail('${blog.id}')">
+         <li class="list-group-item" onclick="toBlogDetail('${
+           blog.id
+         }')" style="cursor: pointer;">
             <div class="list-item-content">
                 <div class="list-item-left">
                     <span>${blog.created_at}</span>

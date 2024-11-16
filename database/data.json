@@ -1,4 +1,48 @@
 {
+  "talks": [
+    {
+      "id": "36b8f84d-df4e-4d49-b662-bcde71a8764f",
+      "title": "Tizim Dizayni Suhbati",
+      "date": "2022-11-05",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    },
+    {
+      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+      "title": "\"FAANG\"da Internship Imkoniyatlari",
+      "date": "2022-03-20",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    },
+    {
+      "id": "2c5ea4c0-4067-11e9-9bdd-2b0d7b3dcb6d",
+      "title": "Internet qanday ishlaydi?",
+      "date": "2021-09-22",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    },
+    {
+      "id": "710b962e-041c-11e1-9234-0123456789ab",
+      "title": "Bir qator Python kod nimalarga qodir?",
+      "date": "2021-09-13",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    },
+    {
+      "id": "109156be-c4fb-41ea-b1b4-efe1671c5836",
+      "title": "Yaxshi Dasturchi Hislatlari",
+      "date": "2021-08-27",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    },
+    {
+      "id": "1e940672-c5ea-64c0-9b5d-ab8dfbbd4bed",
+      "title": "Programmable Google Assistant",
+      "date": "2020-12-26",
+      "youtube-link": "https://www.youtube.com/watch?v=A3AIaWhxb4s",
+      "thumbnail": "https://img.youtube.com/vi/A3AIaWhxb4s/mqdefault.jpg"
+    }
+  ],
   "blogs": [
     {
       "id": "d2168e7b-262d-4c49-a1ba-3222d794fa00",

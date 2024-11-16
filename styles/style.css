@@ -240,3 +240,76 @@ a {
   width: 100%;
   opacity: 1;
 }
+@keyframes bottom_to_top {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9) rotate(5deg);
+  }
+  25% {
+    opacity: 0.5;
+    transform: translateY(10px) scale(1.02) rotate(2deg);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateY(5px) scale(1) rotate(0deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translateY(2px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ^
+^ @keyframes bottom_to_top {
+^  0% {
+^    opacity: 0;
+^    transform: translateY(10px);
+^  }
+^  100% {
+^    opacity: 1;
+^    transform: translateY(0);
+^  }
+^ }
+^ */
+
+.header__card-img {
+  animation-name: bottom_to_top;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.header__card-title,
+.header__card-subtitle,
+.header__card-social-links {
+  animation-name: bottom_to_top;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.header__card-description {
+  opacity: 0;
+  animation-name: bottom_to_top;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.3s;
+}
+
+.animation-btn {
+  opacity: 0;
+  animation-name: bottom_to_top;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.6s;
+}
