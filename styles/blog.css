@@ -10,6 +10,55 @@
 }
 
 .list-group-item:hover {
-  box-shadow: 35px 24px 34px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   z-index: 100;
+}
+
+#arrow-right-icon {
+  transition: 0.3s all linear;
+  opacity: 0;
+  transform: translate(-30px, -2px);
+}
+
+.list-group-item:hover #arrow-right-icon {
+  display: block;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.p-year {
+  position: relative !important;
+}
+
+.year-section {
+  position: relative;
+  left: 200px;
+}
+
+.bg-year-for-blog {
+  position: sticky;
+  display: inline-block;
+  top: 50px;
+  z-index: 2;
+  background: #eee;
+  border-radius: 50px !important;
+}
+
+.bg-year-for-blog h1 {
+  padding: 8px 25px 11px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.month-name {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.blog-title {
+  font-size: 16px;
+}
+
+.list-item-content {
+  padding: 10px 20px;
 }
