@@ -71,7 +71,7 @@ window.onload = () => {
 };
 
 function load() {
-  fetch("https://renderdeploytest-w8s5.onrender.com/blogs")
+  fetch("http://localhost:3000/blogs")
     .then((response) => response.json())
     .then((data) => render(data));
 }

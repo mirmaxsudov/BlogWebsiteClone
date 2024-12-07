@@ -5,7 +5,7 @@ window.onload = () => {
 };
 
 function load() {
-  fetch("https://renderdeploytest-w8s5.onrender.com/blogs")
+  fetch("http://localhost:3000/blogs")
     .then((response) => response.json())
     .then((data) => render(data));
 }
@@ -23,8 +23,8 @@ function render(blogs) {
     wrapperBase += `
       <li class="z-1">
         <ul class="mt-4 mb-4 p-year">
-          <li class="bg-year-for-blog" style="z-index: ${zIndex++}">
-            <h1>${year}</h1>
+          <li class="bg-year-for-blog" style="z-index: ${zIndex}">
+            <h1 style="z-index: ${zIndex++}">${year}</h1>
           </li>
     `;
 

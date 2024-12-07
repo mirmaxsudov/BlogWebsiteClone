@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin Panel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+
+<body>
+    <div class="w-100 fixed-wrapper position-fixed top-0 start-0">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav__wrapper d-flex justify-content-around">
+                    <div class="headers__content d-flex">
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H1</button>
+                        </div>
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H2</button>
+                        </div>
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H3</button>
+                        </div>
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H4</button>
+                        </div>
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H5</button>
+                        </div>
+                        <div class="header__item">
+                            <button type="button" class="toolkit__btn">H6</button>
+                        </div>
+                    </div>
+                    <div class="p__content">
+                        <div class="p__item">
+                            <button type="button" class="toolkit__btn">P</button>
+                        </div>
+                    </div>
+                    <div class="img__content">
+                        <div class="img__item">
+                            <button type="button" class="toolkit__btn">IMG</button>
+                        </div>
+                    </div>
+                    <div class="list__content d-flex">
+                        <div class="list__item">
+                            <button type="button" class="toolkit__btn">UL</button>
+                        </div>
+                        <div class="list__item">
+                            <button type="button" class="toolkit__btn">OL</button>
+                        </div>
+                    </div>
+                    <div class="link__content">
+                        <div class="link__item">
+                            <button type="button" class="toolkit__btn">LINK</button>
+                        </div>
+                    </div>
+                    <div class="create__btn-content">
+                        <div class="create__btn-item">
+                            <button type="button" class="create__btn btn btn-primary">CREATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="container">
+                <div class="changer__wrapper">
+                    <div class="changer__content d-flex w-50 m-auto justify-content-around">
+                        <div class="changer__item">
+                            <button type="button" class="toolkit__btn"><b>Bold</b></button>
+                        </div>
+                        <div class="changer__item">
+                            <button type="button" class="toolkit__btn"><i>ITALIC</i></button>
+                        </div>
+                        <div class="changer__item">
+                            <button type="button" class="toolkit__btn"><u>UNDERLINE</u></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="size">
+            <div class="container">
+                <div class="size__wrapper w-25 m-auto">
+                    <div class="size__content d-flex justify-content-center">
+                        <div class="size__item">
+                            <button type="button" class="toolkit__btn"><i class="bi bi-arrow-left"></i></button>
+                        </div>
+                        <div class="size__item">
+                            <button type="button" class="toolkit__btn">Same</button>
+                        </div>
+                        <div class="size__item">
+                            <button type="button" class="toolkit__btn"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="body__wrapper">
+                        <h1 class="h1 text-center">Dev
+                        </h1>
+                        <div class="build__body-content" contenteditable="true">
+                            2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="result__body-wrapper body__wrapper">
+                        <h1 class="h1 text-center">Prod</h1>
+                        <div class="result__body-content text-center">
+                            Result
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../scripts/admin.js"></script>
+
+</html>
