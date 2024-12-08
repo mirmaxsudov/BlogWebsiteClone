@@ -1,156 +1,76 @@
-const editor = document.getElementById("editor");
-const modalOverlay = document.getElementById("modalOverlay");
-const modalTitle = document.getElementById("modalTitle");
-const modalInputText = document.getElementById("modalInputText");
-const modalImgSrc = document.getElementById("modalImgSrc");
-const modalImgAlt = document.getElementById("modalImgAlt");
-const modalLinkHref = document.getElementById("modalLinkHref");
-const modalLinkText = document.getElementById("modalLinkText");
-const modalListItems = document.getElementById("modalListItems");
-const textField = document.getElementById("textField");
-const imgFields = document.getElementById("imgFields");
-const linkFields = document.getElementById("linkFields");
-const listFields = document.getElementById("listFields");
+// toolkit
+const arrowRight = document.querySelector("#arrow__right");
+const arrowLeft = document.querySelector("#arrow__left");
+const same = document.querySelector("#same");
 
-const insertBtn = document.getElementById("modalInsert");
-const cancelBtn = document.getElementById("modalCancel");
+// body
+const devBody = document.querySelector(".dev__body-wrapper");
+const resultBody = document.querySelector(".result__body-wrapper");
 
-let currentAction = null;
+// Add title
+const addTitleBtn = document.querySelector(".add-title-btn");
+const addTitleModalBtn = document.querySelector(".add-title-modal__btn");
 
-// Show modal with relevant fields
-function showModal(action) {
-  currentAction = action;
-  // Reset fields
-  modalInputText.value = "";
-  modalImgSrc.value = "";
-  modalImgAlt.value = "";
-  modalLinkHref.value = "";
-  modalLinkText.value = "";
-  modalListItems.value = "";
+// additional
+const layout = document.querySelector("#layout");
+const addTitleModal = document.querySelector(".add-title-modal");
 
-  // Hide all fields
-  textField.classList.add("hidden");
-  imgFields.classList.add("hidden");
-  linkFields.classList.add("hidden");
-  listFields.classList.add("hidden");
+addTitleBtn.addEventListener("click", () => {});
 
-  // Adjust modal for specific actions
-  switch (action) {
-    case "H1":
-    case "H2":
-    case "H3":
-    case "H4":
-    case "H5":
-    case "H6":
-    case "P":
-      modalTitle.textContent = `Insert ${action}`;
-      textField.classList.remove("hidden");
-      break;
-    case "IMG":
-      modalTitle.textContent = `Insert Image`;
-      imgFields.classList.remove("hidden");
-      break;
-    case "LINK":
-      modalTitle.textContent = `Insert Link`;
-      linkFields.classList.remove("hidden");
-      break;
-    case "LIST":
-      modalTitle.textContent = `Insert List`;
-      listFields.classList.remove("hidden");
-      break;
-  }
+const newBlogObj = {
+  id: "",
+  createdAt: "02 December, 2022",
+  base: "",
+  currentTitles: [],
+  subtitles: [],
+  texts: [],
+  images: [],
+  links: [],
+  lists: [],
+  quotes: [],
+};
 
-  modalOverlay.style.display = "flex";
-  // Focus on first relevant field
-  if (!textField.classList.contains("hidden")) {
-    modalInputText.focus();
-  } else if (!imgFields.classList.contains("hidden")) {
-    modalImgSrc.focus();
-  } else if (!linkFields.classList.contains("hidden")) {
-    modalLinkHref.focus();
-  } else if (!listFields.classList.contains("hidden")) {
-    modalListItems.focus();
-  }
-}
+arrowLeft.addEventListener("click", () => {
+  makeSame();
 
-function hideModal() {
-  modalOverlay.style.display = "none";
-}
-
-// Insert element into editor
-function insertElement() {
-  let newEl = null;
-  switch (currentAction) {
-    case "H1":
-    case "H2":
-    case "H3":
-    case "H4":
-    case "H5":
-    case "H6":
-      if (modalInputText.value.trim() !== "") {
-        newEl = document.createElement(currentAction.toLowerCase());
-        newEl.textContent = modalInputText.value.trim();
-      }
-      break;
-    case "P":
-      if (modalInputText.value.trim() !== "") {
-        newEl = document.createElement("p");
-        newEl.textContent = modalInputText.value.trim();
-      }
-      break;
-    case "IMG":
-      if (modalImgSrc.value.trim() !== "") {
-        newEl = document.createElement("img");
-        newEl.src = modalImgSrc.value.trim();
-        newEl.alt = modalImgAlt.value.trim();
-      }
-      break;
-    case "LINK":
-      if (
-        modalLinkHref.value.trim() !== "" &&
-        modalLinkText.value.trim() !== ""
-      ) {
-        newEl = document.createElement("a");
-        newEl.href = modalLinkHref.value.trim();
-        newEl.textContent = modalLinkText.value.trim();
-        newEl.target = "_blank";
-      }
-      break;
-    case "LIST":
-      if (modalListItems.value.trim() !== "") {
-        newEl = document.createElement("ul");
-        const lines = modalListItems.value.split("\n");
-        lines.forEach((line) => {
-          const li = document.createElement("li");
-          li.textContent = line.trim();
-          if (li.textContent !== "") {
-            newEl.appendChild(li);
-          }
-        });
-      }
-      break;
-  }
-
-  if (newEl) {
-    editor.appendChild(newEl);
-  }
-
-  hideModal();
-}
-
-document.querySelectorAll(".toolbar button").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const action = btn.getAttribute("data-action");
-    showModal(action);
-  });
+  devBody.parentElement.classList.remove("col-6");
+  devBody.parentElement.classList.add("col-12");
+  resultBody.parentElement.classList.add("d-none");
 });
 
-insertBtn.addEventListener("click", insertElement);
-cancelBtn.addEventListener("click", hideModal);
+arrowRight.addEventListener("click", () => {
+  makeSame();
 
-// Close modal on escape
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    hideModal();
+  resultBody.parentElement.classList.remove("col-6");
+  resultBody.parentElement.classList.add("col-12");
+  devBody.parentElement.classList.add("d-none");
+});
+
+same.addEventListener("click", makeSame);
+
+function makeSame() {
+  devBody.parentElement.classList.add("col-6");
+  devBody.parentElement.classList.remove("col-12");
+
+  resultBody.parentElement.classList.add("col-6");
+  resultBody.parentElement.classList.remove("col-12");
+
+  devBody.parentElement.classList.remove("d-none");
+  resultBody.parentElement.classList.remove("d-none");
+
+  resultBody.parentElement.classList.add("col-6");
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === "Escape") {
+    closeAddTitleModalAndLayout();
+    return;
   }
 });
+
+function closeAddTitleModalAndLayout() {
+  layout.classList.add("d-none");
+  addTitleModal.classList.add("d-none");
+}
+
+layout.addEventListener("click", closeAddTitleModalAndLayout);
