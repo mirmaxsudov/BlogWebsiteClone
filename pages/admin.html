@@ -122,29 +122,24 @@
                             </div>
                         </div>
                         <div class="dev__title-content">
-                            <p>
-                                <span>Abdurahmon</span>
-                                <span>Abdurahmon</span>
-                                <span>Abdurahmon</span>
+                            <p class="dev-title-wrapper mt-3">
                             </p>
                         </div>
                         <div class="build__body-content" contenteditable="true">
-                            2
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="result__body-wrapper body__wrapper">
                         <h1 class="h1 text-center">Prod</h1>
-                        <div class="result__body-content text-center">
-                            Result
+                        <div class="result__body-content">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="add-title-modal pt-2 px-5 py-4">
+    <div class="add-title-modal d-none pt-2 px-5 py-4">
         <h1 class="h1 mb-3">Enter title</h1>
         <div class="add-title-modal__wrapper">
             <input type="text" class="title__input form-control" placeholder="Enter title">
@@ -154,9 +149,11 @@
             </div>
         </div>
     </div>
-    <div id="layout">
+    <div id="layout" class="d-none">
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/uuid@9.0.0/dist/umd/uuid.min.js"></script>
 <script src="../scripts/admin.js"></script>
+<script src="../scripts/admin-prod.js"></script>
 
 </html>

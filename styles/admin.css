@@ -212,3 +212,28 @@ body {
   text-align: center;
   font-size: 20px;
 }
+
+.title-edit-btn,
+.title-delete-btn {
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s all ease;
+  display: inline-block;
+}
+
+.title-edit-btn {
+  bottom: 10px;
+  left: 15px;
+}
+
+.title-delete-btn {
+  bottom: 10px;
+  left: 65px;
+}
+
+.dev-title:hover .title-edit-btn,
+.dev-title:hover .title-delete-btn,
+.dev-title:focus .title-edit-btn,
+.dev-title:focus .title-delete-btn {
+  opacity: 1;
+}
